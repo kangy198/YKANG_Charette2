@@ -4,45 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/zsh8krq.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zsh8krq.css">
     <title>2 INPUT 1 OUTPUT TEMPLATE</title>
     <style>
         html{
             font-family: "nitti-typewriter-open", sans-serif;
             font-weight: 800;
             font-style: normal;
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+        }
+        .content_box{
+            margin-top: 20em;
+        }
+        h1{
+            font-size: 50px;
+            margin-bottom: 0;
         }
         /* STYLE FOR THE INPUT FIELD */
         #charInput1 {
-
+            display: inline-block;
+            margin-left: auto;
+            /* margin-right: auto; */
+            margin-top: 0.5em;
+            background-color: rgb(200, 224, 236);
+            border: solid grey 2px;
+            font-family: "nitti-typewriter-normal", sans-serif;
+            font-weight: 400;
+            padding: 3px;
+            text-align: center;
+        
         }
 
         #charInput2 {
+            display: inline-block;
+            /* margin-left: auto; */
+            margin-right: auto;
+            margin-top: 0.5em;
+            background-color: rgb(200, 224, 236);
+            border: solid grey 2px;
+            font-weight: 400;
+            font-family: "nitti-typewriter-normal", sans-serif;
+            font-weight: 400;
+            padding: 3px;
+            text-align: center;
 
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(200, 224, 236);
+            font-family: "nitti-typewriter-open", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 10px;
+            margin-top: 2em;
+            border-radius: 50%;
+            border: solid grey 2px;
+            padding: 15px;
+            
+
 
         }
 
         /* STYLE FOR THE IMAGE */
         #displayedImage {
             display: none; /* This line is mandatory */
+            opacity: 60%;
+            margin-top: 20em;
+            
         }
     </style>
 </head>
 <body>
-
-    <h1>Counters</h1>
-    <!-- INPUT FIELD FOR 1 CHARACTER -->
-    <input type="text" id="charInput1" maxlength="1">
-    <input type="text" id="charInput2" maxlength="1">
-
-    <!-- BUTTON TO DISPLAY IMAGE -->
-    <button onclick="displayImage()" id="submitButton">Show Image</button>
-
     <!-- IMAGE TO DISPLAY -->
     <img id="displayedImage" src="" alt="Displayed Image">
+
+    <div class="content_box">
+        <h1>Counters</h1>
+        <!-- INPUT FIELD FOR 1 CHARACTER -->
+        <input type="text" id="charInput1" maxlength="1">
+        <input type="text" id="charInput2" maxlength="1">
+
+        <!-- BUTTON TO DISPLAY IMAGE -->
+        <button onclick="displayImage()" id="submitButton">Calculate</button>
+
+    </div>
+    
 
 
     <!-- Image Display Script Below -->
