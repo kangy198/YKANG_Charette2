@@ -19,7 +19,7 @@
             z-index: 1;
             position: fixed;
             top: 30vh;
-            left: 36.5vw;
+            left: 35vw;
         }
         h1{
             font-size: 50px;
@@ -31,12 +31,18 @@
             margin-left: auto;
             /* margin-right: auto; */
             margin-top: 0.5em;
+            width: 4vw;
+            height: 7vh;
             background-color: rgb(200, 224, 236);
+            border-radius: 20px;
             border: solid grey 2px;
             font-family: "nitti-typewriter-normal", sans-serif;
             font-weight: 400;
+            font-size: 40px;
             padding: 3px;
             text-align: center;
+            opacity: 70%;
+
         
         }
 
@@ -45,13 +51,18 @@
             /* margin-left: auto; */
             margin-right: auto;
             margin-top: 0.5em;
+            width: 4vw;
+            height: 7vh;
             background-color: rgb(200, 224, 236);
+            border-radius: 20px;
             border: solid grey 2px;
             font-weight: 400;
             font-family: "nitti-typewriter-normal", sans-serif;
             font-weight: 400;
+            font-size: 40px;
             padding: 3px;
             text-align: center;
+            opacity: 70%;
 
         }
 
@@ -64,24 +75,57 @@
             font-family: "nitti-typewriter-open", sans-serif;
             font-weight: 800;
             font-style: normal;
-            font-size: 10px;
+            font-size: 15px;
             margin-top: 2em;
             border-radius: 50%;
             border: solid grey 2px;
-            padding: 15px;
-          
+            padding: 15px 23px;
+            animation: none; 
+            transition: background-color 0.2s ease ease-in-out;
+            opacity: 80%;
 
         }
 
         #submitButton:hover {
-            background-color: white;
-            transition-duration: 0.4s;
+            animation: blink-bg 0.5s infinite;
+        
+
         }
+
+        @keyframes blink-bg {
+        0%, 100% {
+            background-color: rgb(200, 224, 236);
+        }
+
+        15% {
+            background-color: rgb(169, 131, 205);
+        }
+
+        30%{
+            background-color: rgb(219, 146, 197);
+        }
+
+        45% {
+            background-color: rgb(153, 186, 217);
+        }
+
+        60% {
+            background-color: rgb(228, 225, 132);
+        }
+
+        75%{
+            background-color: aquamarine;
+        }
+
+        90%{
+            background-color: rgb(226, 177, 131);
+        }
+}
+
 
         #charInput1, #charInput2, #submitButton {
         position: relative;
         top: 0;
-
         z-index: 2;
         }
 
@@ -89,12 +133,14 @@
         #displayedImage {
             display: none; /* This line is mandatory */
             opacity: 60%;
-            margin-top: 2em;
-            margin-left: auto;
+            margin-top: 0.2em;
+            padding-top: 0;
+            margin-left: 22em;
             margin-right: auto;
-            width: 50%;
-            height: 80%;
+            width: 55vw;
+            height: 70%;
             z-index: 0;
+
             
         }
     </style>
@@ -104,7 +150,7 @@
     <img id="displayedImage" src="" alt="Displayed Image">
 
     <div class="content_box">
-        <h1>Counters</h1>
+        <h1>Capital Counters</h1>
         <!-- INPUT FIELD FOR 1 CHARACTER -->
         <input type="text" id="charInput1" maxlength="1">
         <input type="text" id="charInput2" maxlength="1">
